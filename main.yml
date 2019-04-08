@@ -10,7 +10,7 @@
     - common
 
 - name: configure and deploy the webservers and application code
-  hosts: webservers
+  hosts: tag_Name_webserver
   remote_user: ec2-user
   become: true
   become_method: sudo
@@ -19,7 +19,7 @@
     - web
 
 - name: deploy MySQL and configure the databases
-  hosts: dbservers
+  hosts: tag_Name_dbserver
   remote_user: ec2-user
   become: true
   become_method: sudo
